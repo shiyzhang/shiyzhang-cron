@@ -5,11 +5,7 @@
   "scripts": {
     "bootstrap": "pnpm install",
     "build": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 pnpm vite build",
-    "build:analyze": "cross-env NODE_OPTIONS=--max-old-space-size=8192 pnpm vite build --mode analyze",
-    "build:dev": "cross-env NODE_ENV=dev NODE_OPTIONS=--max-old-space-size=8192 pnpm vite build --watch",
-    "build:docker": "vite build --mode docker",
     "build:no-cache": "pnpm store prune && npm run build",
-    "build:test": "cross-env NODE_OPTIONS=--max-old-space-size=8192 pnpm vite build --mode test",
     "commit": "czg",
     "dev": "pnpm vite",
     "preinstall": "npx only-allow pnpm",
@@ -20,9 +16,7 @@
     "lint:stylelint": "stylelint \"**/*.{vue,css,less,scss}\" --fix --cache --cache-location node_modules/.cache/stylelint/",
     "prepare": "husky install",
     "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
-    "serve": "npm run dev",
-    "test:gzip": "npx http-server dist --cors --gzip -c-1",
-    "type:check": "vue-tsc --noEmit --skipLibCheck"
+    "serve": "npm run dev"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -65,7 +59,6 @@
     "@shiyzhang/eslint-config": "workspace:*",
     "@shiyzhang/stylelint-config": "workspace:*",
     "@shiyzhang/ts-config": "workspace:*",
-    "@shiyzhang/types": "workspace:*",
     "@vue/compiler-sfc": "^3.4.5",
     "@vue/test-utils": "^2.4.3",
     "cz-git": "^1.8.0",
