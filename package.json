@@ -1,13 +1,41 @@
 {
-  "name": "broadviewcoss",
+  "name": "shiyzhang@cron",
   "version": "0.0.1",
+  "keywords": [
+    "Vue3",
+    "TS",
+    "Vite",
+    "shiyzhang",
+    "cron",
+    "Cron",
+    "cron表达式"
+  ],
+  "bugs": {
+    "url": "https://github.com/shiyzhang/shiyzhang-cron/issues"
+  },
+  "license": "ISC",
+  "author": "shiyzhang",
   "type": "module",
+  "exports": {
+    "./dist/style.css": "./dist/style.css",
+    "./css": "./dist/style.css",
+    ".": {
+      "import": "./dist/shiyzhang@cron.js",
+      "require": "./dist/shiyzhang@cron.umd.cjs"
+    }
+  },
+  "main": "./dist/shiyzhang@cron.umd.cjs",
+  "module": "./dist/shiyzhang@cron.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "bootstrap": "pnpm install",
     "build": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 pnpm vite build",
     "build:no-cache": "pnpm store prune && npm run build",
     "commit": "czg",
     "dev": "pnpm vite",
+    "dir": "tree -l 2 -o DIRREADME.md  --ignore node_modules/, .git/, .gitignore/ ,./dist ",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "turbo run stub",
     "lint": "turbo run lint",
@@ -16,8 +44,7 @@
     "lint:stylelint": "stylelint \"**/*.{vue,css,less,scss}\" --fix --cache --cache-location node_modules/.cache/stylelint/",
     "prepare": "husky install",
     "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
-    "serve": "npm run dev",
-    "dir": "tree -l 4 -o DIRREADME.md  --ignore 'node_modules/, .git/, .gitignore/, dist'"
+    "serve": "npm run dev"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -51,6 +78,7 @@
   "dependencies": {
     "@ant-design/icons-vue": "^7.0.1",
     "ant-design-vue": "^4.1.2",
+    "cron-parser": "^4.9.0",
     "vue": "3.3.4",
     "vue-types": "^5.1.1"
   },
@@ -60,11 +88,14 @@
     "@shiyzhang/eslint-config": "workspace:*",
     "@shiyzhang/stylelint-config": "workspace:*",
     "@shiyzhang/ts-config": "workspace:*",
+    "@vitejs/plugin-vue": "^5.0.4",
     "@vue/compiler-sfc": "^3.4.5",
     "@vue/test-utils": "^2.4.3",
+    "cross-env": "^7.0.3",
     "cz-git": "^1.8.0",
     "czg": "^1.8.0",
     "husky": "^8.0.3",
+    "less": "^4.2.0",
     "lint-staged": "15.2.0",
     "prettier": "^3.1.1",
     "prettier-plugin-packagejson": "^2.4.8",
