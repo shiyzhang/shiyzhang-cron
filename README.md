@@ -1,40 +1,28 @@
 # shiyzhang@cron
 
->一个基于vue3+Ant-Design-vue的cron表达式组件
+> 一个基于vue3+Ant-Design-vue的cron表达式组件
 
 ## 项目目录
 
 ```
-├── LICENSE
-├── README.MD
+├── components
+|  ├── components.ts
+|  ├── EasyCron
+|  ├── index.ts
+|  └── _utils
+├── dist
+|  ├── shiyzhang@cron.js
+|  ├── shiyzhang@cron.umd.cjs
+|  └── style.css
 ├── internal
 |  ├── eslint-config
-|  |  ├── build.config.ts
-|  |  ├── package.json
-|  |  ├── src
-|  |  |  ├── index.ts
-|  |  |  └── strict.ts
-|  |  └── tsconfig.json
 |  ├── stylelint-config
-|  |  ├── build.config.ts
-|  |  ├── package.json
-|  |  ├── src
-|  |  |  └── index.ts
-|  |  └── tsconfig.json
 |  └── ts-config
-|     ├── base.json
-|     ├── node-server.json
-|     ├── node.json
-|     ├── package.json
-|     └── vue-app.json
-├── package
+├── LICENSE
 ├── package.json
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
-├── public
-|  ├── favicon.ico
-|  ├── favicon.svg
-|  └── logo.png
+├── README.md
 ├── src
 ├── tsconfig.json
 ├── turbo.json
@@ -42,7 +30,6 @@
 |  ├── global.d.ts
 |  ├── index.d.ts
 |  └── module.d.ts
-└── uno.config.ts
-
-
+├── uno.config.ts
+└── vite.config.ts
 ```
