@@ -5,9 +5,10 @@
  *
  ***********************************************/
 import type { App } from 'vue';
-
 import * as components from './components';
+import pkg from '../package.json';
 
+export * from './components';
 export const install = function (app: App) {
   Object.keys(components).forEach((key) => {
     const component = components[key];
@@ -18,4 +19,5 @@ export const install = function (app: App) {
 };
 export default {
   install,
+  version: pkg.version,
 };
