@@ -1,6 +1,6 @@
 {
-  "name": "shiyzhang@cron",
-  "version": "0.0.1",
+  "name": "shiyzhangcron",
+  "version": "0.0.6",
   "keywords": [
     "Vue3",
     "TS",
@@ -27,7 +27,8 @@
   "main": "./dist/shiyzhang@cron.umd.cjs",
   "module": "./dist/shiyzhang@cron.js",
   "files": [
-    "dist"
+    "dist",
+    "types/global.d.ts"
   ],
   "scripts": {
     "bootstrap": "pnpm install",

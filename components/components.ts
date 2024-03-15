@@ -5,4 +5,4 @@
  *
  ***********************************************/
 
-export { default as EasyCron } from './EasyCron';
+export { default as EasyCronInner } from './EasyCron';
