@@ -30,9 +30,9 @@
           <YearUI v-model:value="year" :disabled="disabled" />
         </a-tab-pane>
       </a-tabs>
-      <a-divider />
+      <a-divider v-if="inputArea" />
       <!-- 执行时间预览 -->
-      <a-row :gutter="8">
+      <a-row :gutter="8" v-if="inputArea">
         <a-col :span="18" style="margin-top: 22px">
           <a-row :gutter="8">
             <a-col :span="8" style="margin-bottom: 12px">

@@ -23,6 +23,24 @@
       <EasyCronInner v-model="easyCronInnerValue"/>
 ```
 
+# API
+
+## Attributes
+
+| 参数                  | 说明                             | 类型    | 默认值 |
+| :-------------------- | -------------------------------- | ------- | ------ |
+| model-value / v-model | 绑定值                           | string  | -      |
+| disabled              | 是否禁用                         | boolean | false  |
+| hideSecond            | 是否显示秒                       | boolean | false  |
+| hideYear              | 是否显示年（秒不显示时会显示年） | boolean | false  |
+| inputArea             | 是否显示下面输入区               | boolean | false  |
+
+## Events
+
+| 事件名 | 说明                   | 类型        |
+| :----- | ---------------------- | ----------- |
+| change | 仅当 modelValue 改变时 | Function(e) |
+
 ## 项目目录
 
 ```
