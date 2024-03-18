@@ -12,5 +12,6 @@ export const cronProps = {
   disabled: propTypes.bool.def(false),
   hideSecond: propTypes.bool.def(false),
   hideYear: propTypes.bool.def(false),
+  inputArea: propTypes.bool.def(false),
   remote: propTypes.func,
 };
