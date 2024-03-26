@@ -1,6 +1,6 @@
 {
   "name": "shiyzhangcron",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "Vue3",
     "TS",
@@ -28,7 +28,8 @@
   "module": "./dist/shiyzhang@cron.js",
   "files": [
     "dist",
-    "types/global.d.ts"
+    "types",
+    "src"
   ],
   "scripts": {
     "bootstrap": "pnpm install",
@@ -44,6 +45,7 @@
     "lint:prettier": "prettier --write .",
     "lint:stylelint": "stylelint \"**/*.{vue,css,less,scss}\" --fix --cache --cache-location node_modules/.cache/stylelint/",
     "prepare": "husky install",
+    "publish": "pnpm publish --no-git-checks",
     "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
     "serve": "npm run dev"
   },
