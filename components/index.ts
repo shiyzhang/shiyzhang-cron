@@ -6,7 +6,6 @@
  ***********************************************/
 import type { App } from 'vue';
 import * as components from './components';
-import pkg from '../package.json';
 
 export * from './components';
 export const install = function (app: App) {
@@ -19,5 +18,5 @@ export const install = function (app: App) {
 };
 export default {
   install,
-  version: pkg.version,
+  version: '0.1.4',
 };
