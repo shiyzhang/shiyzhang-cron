@@ -6,7 +6,7 @@
 ------------------------------------------------>
 <template>
   <div>
-    <a-button>你好呀</a-button>
+    <a-button>你好呀!</a-button>
     <easy-cron-inner />
   </div>
 </template>
