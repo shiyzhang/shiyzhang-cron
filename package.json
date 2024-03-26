@@ -1,6 +1,6 @@
 {
   "name": "shiyzhangcron",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "keywords": [
     "Vue3",
     "TS",
@@ -29,13 +29,13 @@
   "files": [
     "dist",
     "types",
-    "src"
+    "components"
   ],
   "scripts": {
     "bootstrap": "pnpm install",
     "build": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 pnpm vite build",
     "build:no-cache": "pnpm store prune && npm run build",
-    "commit": "czg",
+    "commit": "git add . && czg",
     "dev": "pnpm vite",
     "dir": "tree -l 2 -o DIRREADME.md  --ignore node_modules/, .git/, .gitignore/ ,./dist ",
     "preinstall": "npx only-allow pnpm",
